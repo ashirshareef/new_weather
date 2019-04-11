@@ -84,6 +84,6 @@ app.get('*',(req,res)=>{
     res.send('Page not Found, please go away!')
 });
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log(`server is up on port ${port}`);
 });
