@@ -4,13 +4,14 @@ const hbs=require('hbs');
 const GeoCode=require('../../weather-app/geoCode');
 const weather=require('../../weather-app/weather');
 
+const port=process.env.PORT || 3000;
 const app = express();
 //Define paths for express config
 const publicDirectoryPath=path.join(__dirname,'../public');
 const viewsPath=path.join(__dirname,'../templates/views');
 const partialsPath= path.join(__dirname,'../templates/partials');
 
-const port=process.env.PORT || 3000;
+
 //setup handlebars engine and views location
 app.set('view engine','hbs');
 app.set('views',viewsPath);
@@ -84,5 +85,5 @@ app.get('*',(req,res)=>{
 });
 
 app.listen(port,()=>{
-    console.log(`server is up on port ${port}`);
+    //console.log(`server is up on port ${port}`);
 });
