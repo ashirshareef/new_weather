@@ -22,7 +22,7 @@ app.use(express.static(publicDirectoryPath));
 
 
 app.get('',(req,res)=>{
-    res.render('index',{data:[{nav1:'weather',url:''},{nav2:'help',url:'/help'},{nav3:'about',url:'/about'}]});
+    res.render('index');
 });
 
 app.get('/about',(req,res)=>{
