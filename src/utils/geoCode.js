@@ -1,4 +1,4 @@
-const request=require('../../node_modules/request');
+const request=require('request');
 
 const geoCode = (city, callback) => {
     const geocodeUrl = `https://api.mapbox.com/geocoding/v5/mapbox.places/${city}.json?limit=1&access_token=pk.eyJ1IjoiYXNoaXJzIiwiYSI6ImNqdTlkMjByYzI3Y3QzeXRheDh5enV2N3cifQ.Ed5OxzZ12w2cRrBWvsYxmg`;
