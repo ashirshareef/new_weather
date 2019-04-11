@@ -2,7 +2,7 @@ console.log("client side javascript");
 
 const weatherForm=document.querySelector('form');
 weatherForm.addEventListener('submit',(e)=>{
-    console.log("entered script");
+    //console.log("entered script");
     e.preventDefault();
 
     const address=document.getElementById('address').value;
@@ -21,7 +21,7 @@ getWeather=function (url) {
                 document.getElementById('weatherForecast').innerText=data.error;
             }
             else{
-                document.getElementById('location').innerText=data.location;
+                document.getElementById('location').innerText=data.location +'.';
                 document.getElementById('weatherForecast').innerText=data.forecast;
 
                 console.log(data.forecast);

@@ -52,9 +52,12 @@ app.get('/weather',(req,res)=>{
             }
             //res.send(response);
              let currently=response.body.currently;
+            let daily=response.body.daily.data[0];
+            //console.log(response.body);
              //res.send(`The weather in ${placeName} is ${response.body.daily.data[0].summary} It is currently ${data.temperature} degrees out there and there is a ${data.precipProbability} % chance of rain`);
             res.send({
-                forecast:`${response.body.daily.data[0].summary} It is currently ${currently.temperature} degrees out there and there is a ${currently.precipProbability} % chance of rain`,
+                forecast:`${response.body.daily.data[0].summary} It is currently ${currently.temperature} degrees out there and there is a ${currently.precipProbability} % chance of rain, max temperature today is 
+                ${daily.temperatureMax} degrees and the minimum temperature is ${daily.temperatureMin} degrees.`,
                 location:placeName,
                 address:req.query.address,
                 currently
