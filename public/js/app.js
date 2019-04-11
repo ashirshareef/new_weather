@@ -5,7 +5,7 @@ weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault();
     const address=document.getElementById('address').value;
     console.log(address);
-    const url = `http://localhost:3000/weather?address=${address}`;
+    const url = `/weather?address=${address}`;
     document.getElementById('location').innerText="";
     document.getElementById('weatherForecast').innerText="Loading...";
     getWeather(url);
